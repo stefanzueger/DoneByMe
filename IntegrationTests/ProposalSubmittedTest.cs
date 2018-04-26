@@ -41,6 +41,10 @@ namespace IntegrationTests
             Assert.IsNotNull(existing);
 
             Thread.Sleep(1000);
+
+            existing = Repositories.ProposalRepository.ProposalOf(proposal.Id);
+
+            Assert.IsTrue(existing.Progress.WasPricingVerified());
         }
     }
 }

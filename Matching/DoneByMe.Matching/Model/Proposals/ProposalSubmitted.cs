@@ -10,6 +10,7 @@ namespace DoneByMe.Matching.Model.Proposals
 		public string Summary { get; private set; }
 		public long CompletedBy { get; private set; }
 		public string[] Steps { get; private set; }
+        //keywords
 		public long Price { get; private set; }
 
         public ProposalSubmitted() { }

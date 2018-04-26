@@ -15,6 +15,8 @@ namespace DoneByMe.Matching.Model.Proposals
 
 		public ISet<Step> Steps { get; private set; }
 
+        //keywords
+
 		public long Price { get; private set; }
 
 		public long SuggestedPrice { get; private set; }
