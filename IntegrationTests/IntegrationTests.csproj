@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Matching">
+      <HintPath>..\Matching\bin\Debug\netcoreapp2.0\Matching.dll</HintPath>
+    </Reference>
+    <Reference Include="mockroservices-dotnet">
+      <HintPath>..\..\mockroservices-dotnet\mockroservices-dotnet\bin\Debug\mockroservices-dotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Pricing">
+      <HintPath>..\Pricing\bin\Debug\netcoreapp2.0\Pricing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

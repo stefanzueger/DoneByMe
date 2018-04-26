@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace></RootNamespace>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="mockroservices-dotnet">
+      <HintPath>..\..\mockroservices-dotnet\mockroservices-dotnet\bin\Debug\mockroservices-dotnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
