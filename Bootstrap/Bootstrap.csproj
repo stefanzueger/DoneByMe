@@ -8,14 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Matching">
-      <HintPath>..\Matching\bin\Debug\netcoreapp2.0\Matching.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Matching\Matching.csproj" />
+    <ProjectReference Include="..\Pricing\Pricing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="mockroservices-dotnet">
       <HintPath>..\..\mockroservices-dotnet\mockroservices-dotnet\bin\Debug\mockroservices-dotnet.dll</HintPath>
-    </Reference>
-    <Reference Include="Pricing">
-      <HintPath>..\Pricing\bin\Debug\netcoreapp2.0\Pricing.dll</HintPath>
     </Reference>
   </ItemGroup>
 
