@@ -15,15 +15,15 @@ namespace DoneByMe.Matching.Model.Proposals
 
 		public ISet<Step> Steps { get; private set; }
 
-        //keywords
+        public ISet<string> Keywords { get; private set; }
 
 		public long Price { get; private set; }
 
 		public long SuggestedPrice { get; private set; }
 
-		public static Expectations Of(Summary summary, Description description, DateTime completedBy, ISet<Step> steps, long price)
+		public static Expectations Of(Summary summary, Description description, DateTime completedBy, ISet<Step> steps, long price, ISet<string> keywords)
 		{
-			return new Expectations(summary, description, completedBy, steps, price);
+			return new Expectations(summary, description, completedBy, steps, price, keywords);
 		}
 
 		public Expectations WithAdjusted(DateTime suggestedCompletedBy)
@@ -113,7 +113,8 @@ namespace DoneByMe.Matching.Model.Proposals
 			return steps;
 		}
 
-		private Expectations(Summary summary, Description description, DateTime completedBy, ISet<Step> steps, long price)
+		private Expectations(Summary summary, Description description, DateTime completedBy, ISet<Step> steps, long price,
+		    ISet<string> keywords)
 		{
 			Summary = summary;
 			Description = description;
@@ -122,6 +123,7 @@ namespace DoneByMe.Matching.Model.Proposals
 			Steps = steps;
 			Price = price;
 			SuggestedPrice = price;
+		    Keywords = keywords;
 		}
 
 		private Expectations(Summary summary, Description description, DateTime completedBy, DateTime suggestedCompletedBy, ISet<Step> steps, long price, long suggestedPrice)

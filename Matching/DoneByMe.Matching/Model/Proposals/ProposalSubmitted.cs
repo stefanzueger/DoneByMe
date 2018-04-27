@@ -10,7 +10,7 @@ namespace DoneByMe.Matching.Model.Proposals
 		public string Summary { get; private set; }
 		public long CompletedBy { get; private set; }
 		public string[] Steps { get; private set; }
-        //keywords
+        public string Keywords { get; private set; }
 		public long Price { get; private set; }
 
         public ProposalSubmitted() { }
@@ -28,7 +28,8 @@ namespace DoneByMe.Matching.Model.Proposals
                 Description = expectations.Description.Text,
                 CompletedBy = expectations.CompletedBy.Ticks,
                 Steps = Expectations.Convert(expectations.Steps),
-                Price = expectations.Price
+                Price = expectations.Price,
+                Keywords = string.Join(",", expectations.Keywords) 
             };
 
             return proposalSubmitted;

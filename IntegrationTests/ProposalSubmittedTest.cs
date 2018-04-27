@@ -22,13 +22,16 @@ namespace IntegrationTests
             ISet<Step> steps = new HashSet<Step>();
             steps.Add(Step.Ordered(1, Description.Has("Step 1")));
 
+            ISet<string> keywords = new HashSet<string> { "#windows" };
+
             Expectations expectations =
                 Expectations.Of(
                     Summary.Has("A summary"),
                     Description.Has("A description"),
                     new DateTime(DateTime.Now.Ticks + (24 * 60 * 60 * 1000)),
                     steps,
-                    1995);
+                    1995,
+                    keywords);
 
             Proposal proposal = Proposal.SubmitFor(client, expectations);
 

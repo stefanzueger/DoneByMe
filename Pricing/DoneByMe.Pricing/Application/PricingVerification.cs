@@ -10,9 +10,9 @@ namespace DoneByMe.Pricing.Application
 		{
 		}
 
-		public void VerifyPricing(string pricedItemId, long price)
+		public void VerifyPricing(string pricedItemId, long price, string[] keywords)
 		{
-			new PricingAnalyzer().AnalyzePricing(pricedItemId, price);
+			new PricingAnalyzer().AnalyzePricing(pricedItemId, price, keywords);
 		}
 	}
 }

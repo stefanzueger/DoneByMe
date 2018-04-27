@@ -44,7 +44,8 @@ namespace DoneByMe.Matching.Application
 			string description,
 			DateTime completedBy,
 			Dictionary<int, string> steps,
-			long price)
+			long price,
+			ISet<string> keywords)
 		{
 
 			Proposal proposal =
@@ -55,7 +56,8 @@ namespace DoneByMe.Matching.Application
 						Description.Has(description),
 						completedBy,
 						Step.From(steps),
-						price));
+						price,
+					    keywords));
 
 			repository.Save(proposal);
 		}

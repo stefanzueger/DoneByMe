@@ -24,10 +24,9 @@ namespace DoneByMe.Pricing.Infra.Messaging
 				MessageExchangeReader reader = MessageExchangeReader.From(message);
 				string proposalId = reader.PayloadStringValue("proposalId");
 				long price = reader.PayloadLongValue("price");
-                // TODO: dispatch with full parameters (currently not full)
-                // for example, matching proposal keywords[] are
-                // needed by the pricing engine (verification)
-                API.PricingVerification.VerifyPricing(proposalId, price);
+			    string[] keywords = reader.PayloadStringValue("keywords").Split(",");
+                
+			    API.PricingVerification.VerifyPricing(proposalId, price, keywords);
 			}
 		}
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using VaughnVernon.Mockroservices;
 
 namespace DoneByMe.Matching.Model.Proposals
@@ -83,7 +84,8 @@ namespace DoneByMe.Matching.Model.Proposals
 					Description.Has(proposalSubmitted.Description),
 					new DateTime(proposalSubmitted.CompletedBy),
 					Expectations.Convert(proposalSubmitted.Steps),
-					proposalSubmitted.Price);
+					proposalSubmitted.Price,
+                    proposalSubmitted.Keywords.Split(",").ToHashSet());
 			this.Progress = Progress.NONE;
 		}
 

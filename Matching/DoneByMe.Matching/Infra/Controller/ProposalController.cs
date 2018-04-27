@@ -23,17 +23,19 @@ namespace DoneByMe.Matching.Infra.Controller
 			string description,
 			DateTime completedBy,
 			Dictionary<int, string> steps,
-			long price)
+			long price,
+			ISet<string> keywords)
 		{
 
-			API.ProposalCommands
-			  .SubmitProposal(
-				clientId,
-				summary,
-				description,
-				completedBy,
-				steps,
-				price);
+		    API.ProposalCommands
+		        .SubmitProposal(
+		            clientId,
+		            summary,
+		            description,
+		            completedBy,
+		            steps,
+		            price,
+		            keywords);
 		}
 	}
 }
