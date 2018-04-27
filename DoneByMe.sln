@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scheduling", "Scheduling\Sc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bootstrap", "Bootstrap\Bootstrap.csproj", "{04D5CB24-03D7-4707-980C-27B9ECECFCE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{D6268872-E88C-4C24-B70B-BEB8D905879B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{D6268872-E88C-4C24-B70B-BEB8D905879B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mockroservices-dotnet", "mockroservices-dotnet\mockroservices-dotnet.csproj", "{6881B4EB-0FDD-482B-B740-6D6BA2566406}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{AB078424-82B6-49F7-9060-336FEEA20594}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +43,16 @@ Global
 		{D6268872-E88C-4C24-B70B-BEB8D905879B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6268872-E88C-4C24-B70B-BEB8D905879B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6268872-E88C-4C24-B70B-BEB8D905879B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6881B4EB-0FDD-482B-B740-6D6BA2566406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6881B4EB-0FDD-482B-B740-6D6BA2566406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6881B4EB-0FDD-482B-B740-6D6BA2566406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6881B4EB-0FDD-482B-B740-6D6BA2566406}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6881B4EB-0FDD-482B-B740-6D6BA2566406} = {AB078424-82B6-49F7-9060-336FEEA20594}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A41AB2B-293B-4CF5-B91B-FBE78C94D7E6}

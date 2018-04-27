@@ -15,13 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Matching\Matching.csproj" />
+    <ProjectReference Include="..\mockroservices-dotnet\mockroservices-dotnet.csproj" />
     <ProjectReference Include="..\Pricing\Pricing.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="mockroservices-dotnet">
-      <HintPath>..\..\mockroservices-dotnet\mockroservices-dotnet\bin\Debug\mockroservices-dotnet.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
